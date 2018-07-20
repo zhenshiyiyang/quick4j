@@ -31,7 +31,7 @@ public class metaTableController {
     @Resource
     private FileUpService fileUpService;
     /*
-     * mysql插入元数据并上传文件至hdfs
+     * mysql插入元数据并上传文件至hadoop dfs
      */
     @RequestMapping(value = "/save", method = { RequestMethod.POST })
     public void save(HttpServletRequest request,HttpServletResponse response) throws Exception{
