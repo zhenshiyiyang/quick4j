@@ -1,6 +1,6 @@
 <h1 align="center">quick4j</h1>
-
-
+本项目基于quick4j开源项目基础进行开发，加入hadoop，利用hdfs对数据进行上传管理，在mysql数据库中保存
+相关元数据！
 **quick4j** 是一个通用JavaWeb项目骨架， 
 积极在探索使用Java、Web等一系列技术，搭建开发高性能、高可拓展性、高可维护性，高安全性的web项目；
 以及Web前端模块化、组件化开发，与后台最佳的交互；以及探索使用NoSQL、与SQL等多数据库共存的解决方案；
@@ -43,14 +43,3 @@
 > #### 2、 在Eclipse
 * File -> Import -> Existing Maven Projects -> ...
 
-
-## If you have a better suggestion,Please share out,Let's do better.
-> Author ：StarZou  
-> Email  ：starzou@126.com
-
-
-## License
-> Copyright (c) 2016 StarZou.  
-> Licensed under the MIT license.  
-
-> Welcome to stars, forks, create new pull request.
