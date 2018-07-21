@@ -36,12 +36,17 @@
     	            alert("您未安装FLASH控件，无法上传图片！请安装FLASH控件后再试。");
     	        },
     	        'onUploadSuccess' : function(file, data, response){//单个文件上传成功触发
-    	                               //data就是action中返回来的数据
+                    //data就是action中返回来的数据
+					if(data=="success"){
+						alert("文件上传成功");
+					}else{
+					    alert("文件上传失败");
+					}
     	        },'onQueueComplete' : function(){//所有文件上传完成
     	        	$("#zuozhe").val("");
     	        	$("#laiyuan").val("");
     	        	$("#zhuti").val("未选");
-    	        	alert("文件上传成功!");
+    	        	//alert("文件上传成功!");
     	       		}
     	        });
     	});
