@@ -126,7 +126,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;">
+                            <a href="rest/page/search" id = "search">
                                 数据检索
                             </a>
                         </li>
@@ -273,7 +273,7 @@
 <!-- BEGIN FOOTER -->
 <div class="footer">
     <div class="footer-inner">
-        2014 &copy; Quick4j By Eliteams.
+        2018 &copy; liuxin
     </div>
     <div class="footer-tools">
         <span class="go-top"><i class="fa fa-angle-up"></i></span>

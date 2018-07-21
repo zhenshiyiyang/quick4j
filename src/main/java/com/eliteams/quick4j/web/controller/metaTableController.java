@@ -15,6 +15,7 @@ import com.eliteams.quick4j.web.service.FileUpService;
 import com.eliteams.quick4j.web.service.MetaTableService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -220,5 +221,30 @@ public class metaTableController {
         } else {
             System.out.println("Error renmaing file");
         }
+    }
+    /*
+      文件检索，首次页面加载所有文件列表
+     */
+    @RequestMapping("/list")
+    public String metaList(HttpServletRequest request,Model model){
+        String pageNow = request.getParameter("pageNow");
+        model = metaTableService.selectListByPage(pageNow,model);
+        return "unStruct/searchList";
+    }
+    /*
+      查询，按照条件进行分页查询，因为涉及到分页和保存查询条件，所以需要返回新页面
+     */
+    @RequestMapping("/search")
+    public String searchMeta(HttpServletRequest request,Model model){
+        Map map = new HashMap();
+        map.put("wenjianming",(String) request.getParameter("wenjianming"));
+        map.put("zuozhe",(String) request.getParameter("zuozhe"));
+        map.put("laiyuan",(String) request.getParameter("laiyuan"));
+        map.put("leixing",(String) request.getParameter("leixing"));
+        map.put("kaishiriqi",(String) request.getParameter("kaishiriqi"));
+        map.put("jieshuriqi",(String) request.getParameter("jieshuriqi"));
+        String pageNow = request.getParameter("pageNow");
+        model = metaTableService.selectMetaByCond(pageNow,model,map);
+        return "unStruct/searchListCond";
     }
 }

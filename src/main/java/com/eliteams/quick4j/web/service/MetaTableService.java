@@ -1,6 +1,7 @@
 package com.eliteams.quick4j.web.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.eliteams.quick4j.web.model.MetaTable;
 import org.springframework.ui.Model;
@@ -59,4 +60,13 @@ public interface MetaTableService extends GenericService<MetaTable, Integer>{
      */
     List<MetaTable> selectList();
 
+    /*
+      分页查询全部非结构化元数据
+     */
+    Model selectListByPage(String pageNow,Model model);
+
+    /*
+     根据查询条件查询元数据
+    */
+    Model selectMetaByCond(String pageNow,Model model,Map map);
 }

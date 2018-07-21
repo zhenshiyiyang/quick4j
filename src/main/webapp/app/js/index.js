@@ -25,9 +25,14 @@ $(function() {
                         $('#main-content').html(data);
                     });
                 }
+                if($(this).attr("id")=="search"){
+                    //e.preventDefault();
+                    $.get("rest/meta/list", function(data) {
+                        $('#listAll').html(data);
+                    });
+                }
             });
         };
-
         me.init = function() {
             me.handleMenuClick();
             me.handleSubMenuClick();

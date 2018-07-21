@@ -61,4 +61,11 @@ public class PageController {
         return "unStruct/upload";
     }
 
+    /*
+     非结构化数据检索
+    */
+    @RequestMapping("/search")
+    public String search() {
+        return "unStruct/search";
+    }
 }

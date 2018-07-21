@@ -335,4 +335,80 @@
       isdelete = #{isdelete,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <!-- 分页SQL语句 -->
+  <select id="selectMetaByPage" resultMap="BaseResultMap">
+        select
+        *
+        from metaTable
+        WHERE
+        isdelete = 0
+        ORDER BY id DESC
+        limit #{startPos},#{pageSize}
+  </select>
+  <!-- 取得记录的总数 -->
+  <select id="getMetaCount" resultType="java.lang.Integer">
+        select
+        count(*)
+        from metaTable
+        where
+        isdelete = 0
+  </select>
+  <!-- 查询分页SQL语句 -->
+  <select id="selectMetaByCond" resultMap="BaseResultMap">
+        select
+        *
+        from metaTable
+        WHERE
+        <trim>
+          <if test="map.wenjianming != null">
+            timing LIKE CONCAT('%', #{map.wenjianming}, '%') and
+          </if>
+          <if test="map.zuozhe != null">
+            zuozhe LIKE CONCAT('%', #{map.zuozhe}, '%') and
+          </if>
+          <if test="map.laiyuan != null">
+            laiyuan LIKE CONCAT('%', #{map.laiyuan}, '%') and
+          </if>
+          <if test="map.leixing != null">
+            leixing LIKE CONCAT('%', #{map.leixing}, '%') and
+          </if>
+          <if test="map.involve_city != null">
+            riqi &gt;= to_date(#{map.kaishiriqi},'yyyy-MM-dd') and
+          </if>
+          <if test="map.involve_county != null">
+            riqi &lt;= to_date(#{endTime}, 'yyyy-MM-dd') and
+          </if>
+        </trim>
+        isdelete = 0
+        ORDER BY id DESC
+        limit #{startPos},#{pageSize}
+  </select>
+  <!-- 取得查询记录的总数 -->
+  <select id="getMetaCountByCond" resultType="java.lang.Integer">
+        select
+        count(*)
+        from metaTable
+        where
+        <trim>
+        <if test="map.wenjianming != null">
+          timing LIKE CONCAT('%', #{map.wenjianming}, '%') and
+        </if>
+        <if test="map.zuozhe != null">
+          zuozhe LIKE CONCAT('%', #{map.zuozhe}, '%') and
+        </if>
+        <if test="map.laiyuan != null">
+          laiyuan LIKE CONCAT('%', #{map.laiyuan}, '%') and
+        </if>
+        <if test="map.leixing != null">
+          leixing LIKE CONCAT('%', #{map.leixing}, '%') and
+        </if>
+        <if test="map.involve_city != null">
+          riqi &gt;= to_date(#{map.kaishiriqi},'yyyy-MM-dd') and
+        </if>
+        <if test="map.involve_county != null">
+          riqi &lt;= to_date(#{endTime}, 'yyyy-MM-dd') and
+        </if>
+        </trim>
+        isdelete = 0
+  </select>
 </mapper>

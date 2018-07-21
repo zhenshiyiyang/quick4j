@@ -71,7 +71,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 			<label class="control-label visible-ie8 visible-ie9">用户名</label>
 			<div class="input-icon">
 				<i class="fa fa-user"></i>
-				<input name="username" id="username" size="25" value="starzou" class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" />
+				<input name="username" id="username" size="25" value="liuxin" class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" />
 			</div>
 		</div>
 		<div class="form-group">
