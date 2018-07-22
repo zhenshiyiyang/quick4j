@@ -1,6 +1,8 @@
 package com.eliteams.quick4j.web.controller;
 
 import java.io.*;
+import java.net.URI;
+import java.net.URLEncoder;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -8,12 +10,16 @@ import java.util.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import org.apache.hadoop.fs.FileSystem;
 import com.eliteams.quick4j.web.model.Format;
 import com.eliteams.quick4j.web.model.MetaTable;
 import com.eliteams.quick4j.web.service.FileUpService;
 import com.eliteams.quick4j.web.service.MetaTableService;
 import org.apache.commons.lang.StringUtils;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FSDataInputStream;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
@@ -163,21 +169,7 @@ public class metaTableController {
                         metaTableService.insert(meta);
                         System.out.println("文件上传完成");
                         //上传完成后删除文件
-                        if(!wenjian.exists())
-                        {
-                            System.out.println("文件不存在，删除文件失败");
-                        }
-                        else
-                        {
-                            if(wenjian.delete())
-                            {
-                                System.out.println("删除文件成功");
-                            }
-                            else
-                            {
-                                System.out.println("删除文件失败");
-                            }
-                        }
+                        deleteFile(wenjian);
                     } catch (Exception e) {
                         // TODO: handle exception
                         e.printStackTrace();
@@ -246,5 +238,54 @@ public class metaTableController {
         String pageNow = request.getParameter("pageNow");
         model = metaTableService.selectMetaByCond(pageNow,model,map);
         return "unStruct/searchListCond";
+    }
+    /*
+      下载文件，从hdfs上面
+     */
+    @RequestMapping("/down")
+    public void download(HttpServletRequest request,HttpServletResponse response,Model model) throws IOException {
+        String loc = request.getParameter("loc");
+        String filename = request.getParameter("filename");
+        String dest = "hdfs://master:9000"+loc;
+        String local = request.getSession().getServletContext().getRealPath("/") + "uploads/"+filename;
+        Configuration conf = new Configuration();
+        FileSystem fs = FileSystem.get(URI.create(dest),conf);
+        FSDataInputStream fsdi = fs.open(new Path(dest));
+        OutputStream output = new FileOutputStream(local);
+        IOUtils.copyBytes(fsdi,output,4096,true);
+        // 设置响应头，控制浏览器下载该文件
+        response.setHeader("content-disposition", "attachment;filename=" + URLEncoder.encode(filename, "UTF-8"));
+        // 读取要下载的文件，保存到文件输入流
+        FileInputStream in = new FileInputStream(local);
+        // 创建输出流
+        OutputStream out = response.getOutputStream();
+        // 创建缓冲区
+        byte buffer[] = new byte[1024];
+        int len = 0;
+        // 循环将输入流中的内容读取到缓冲区当中
+        while ((len = in.read(buffer)) > 0) {
+            // 输出缓冲区的内容到浏览器，实现文件下载
+            out.write(buffer, 0, len);
+        }
+        // 关闭文件输入流
+        in.close();
+        // 关闭输出流
+        out.close();
+        //下载完成后删除文件
+        File file = new File(local);
+        deleteFile(file);
+    }
+    public static void deleteFile(File file){
+        if(!file.exists())
+        {
+            System.out.println("文件不存在，删除文件失败");
+        }
+        else {
+            if (file.delete()) {
+                System.out.println("删除文件成功");
+            } else {
+                System.out.println("删除文件失败");
+            }
+        }
     }
 }

@@ -5,7 +5,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Insert title here</title>
+    <title>非结构化数据上传</title>
+	<link rel="stylesheet" type="text/css" href="app/css/qmp/qmp.css" >
     <script type="text/javascript" src="app/js/uploadify/jquery.uploadify.min.js"></script>
     <script type="text/javascript">
     	$(function(){
@@ -54,27 +55,26 @@
 </head>
 <body>
 <div id="all">
-    <div id="up">
-        <div id="left">
+    <div id="listAll">
+        <!--<div id="left">-->
             <div>
-               <table style="text-align:center;display:inline;">
-               		<tbody>
+               <table table width="100%" border="0" cellpadding="7" cellspacing="0"
+					  class="tableBasic" id="list_t">
                			<tr>
-               				<td>作者:</td>
-               				<td><input type="text" id = "zuozhe" name="zuozhe"  style="margin-top:10px;margin-bottom:10px;">
+               				<td align="left" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white">作者:</td>
+               				<td align="center" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white"><input type="text" id = "zuozhe" name="zuozhe">
                				</td>
                			</tr>
                			<tr>
-               				<td>来源:</td>
-               				<td><input type="text" id = "laiyuan" name="laiyuan" style="margin-top:10px;margin-bottom:10px;">
+               				<td align="" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white">来源:</td>
+               				<td align="center" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white"><input type="text" id = "laiyuan" name="laiyuan">
                				</td>
                			</tr>
                			<tr>
-               				<td>主题:</td>
-               				<!-- <td><input id = "zhuti" type="text" name="zhuti" style="margin-top:10px;margin-bottom:10px;"> -->
+               				<td align="" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white">主题:</td>
                				</td>
-               				<td>
-               				<select id="zhuti" name="zhuti" style="margin-top:10px;margin-bottom:10px;">
+               				<td align="center" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white">
+               				<select id="zhuti" name="zhuti">
                						<option value="未选">全部主题</option>
                						<option value="文本">文本</option>
                						<option value="图片">图片</option>
@@ -83,15 +83,20 @@
                				</select>
                				</td>
                			</tr>
-               		</tbody>
+				        <td align="" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white">
+								<input type="file" id="uploadify" name="uploadify" style="padding-left: 700px;">
+								<div id="fileQueue"></div>
+						</td>
+				        <tr>
+							<td align="center" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white">
+								<a href="javascript:$('#uploadify').uploadify('upload','*')"><font size="3">开始上传</font></a>
+							</td>
+							<td align="center" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white">
+								<a href="javascript:$('#uploadify').uploadify('cancel','*')"><font size="3">取消上传</font></a>
+							</td>
+						</tr>
                	</table>
-                  <input type="file" id="uploadify" name="uploadify" style="padding-left: 700px;">
-                  <div id="fileQueue"></div>
-                  <br><br><br>
-                  <a href="javascript:$('#uploadify').uploadify('upload','*')" style="padding-left: 690px;"><font size="3">开始上传</font></a>
-                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  <a href="javascript:$('#uploadify').uploadify('cancel','*')"><font size="3">取消所有上传</font></a>
-            </div>
+            <!--</div>-->
         </div>
     </div>
 </div>

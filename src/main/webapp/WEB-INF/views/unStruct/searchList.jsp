@@ -16,7 +16,6 @@
 </head>
 <body>
 <div id="list" style="display: block;overflow:auto;width:100%;">
-    <input type="text" name="nameForMap" id="nameForMap" value="${name}" style="display:none"/>
     <table width="100%" border="0" cellpadding="7" cellspacing="0"
            class="tableBasic" id="list_t">
         <tr>
@@ -41,8 +40,8 @@
                 <td align="center" style="white-space: nowrap;">${meta.laiyuan}</td>
                 <td align="center" style="white-space: nowrap;">${meta.geshi}</td>
                 <td align="center" style="white-space: nowrap;">
-                    <a href="rest/meta/id?id="
-                       class="updateButton" style="color: white;background:#FAAD5E;padding:2px 6px">下载</a>
+                    <a href="rest/meta/down?loc=${meta.cunchu}&filename=${meta.timing}"
+                       class="downLoadButton" style="color: white;background:#FAAD5E;padding:2px 6px">下载</a>
                     <a href="rest/meta/delete?id="
                        class="deleteButton" style="color: white;background:#00C0BF;padding:2px 6px">删除</a>
                 </td>
