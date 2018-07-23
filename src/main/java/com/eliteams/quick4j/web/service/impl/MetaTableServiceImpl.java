@@ -90,4 +90,8 @@ public class MetaTableServiceImpl extends GenericServiceImpl<MetaTable, Integer>
     public int insert(MetaTable model){
         return metaTableMapper.insert(model);
     }
+
+	public int delete(Integer id){
+		return metaTableMapper.deleteByPrimaryKey(id);
+	}
 }

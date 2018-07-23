@@ -83,10 +83,13 @@
                				</select>
                				</td>
                			</tr>
-				        <td align="" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white">
-								<input type="file" id="uploadify" name="uploadify" style="padding-left: 700px;">
-								<div id="fileQueue"></div>
-						</td>
+				        <tr>
+							<td align="" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white">
+									<input type="file" id="uploadify" name="uploadify" style="padding-left: 700px;">
+									<div id="fileQueue"></div>
+							</td>
+							<td align="" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white"></td>
+						</tr>
 				        <tr>
 							<td align="center" style="white-space: nowrap;text-align: center;background:#99A4AF;color:white">
 								<a href="javascript:$('#uploadify').uploadify('upload','*')"><font size="3">开始上传</font></a>

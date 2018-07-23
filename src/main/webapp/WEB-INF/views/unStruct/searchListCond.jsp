@@ -42,7 +42,7 @@
                 <td align="center" style="white-space: nowrap;">
                     <a href="rest/meta/down?loc=${meta.cunchu}&filename=${meta.timing}"
                        class="downLoadButton" style="color: white;background:#FAAD5E;padding:2px 6px">下载</a>
-                    <a href="rest/meta/delete?id="
+                    <a href="rest/meta/delete?id=${meta.id}&loc=${meta.cunchu}"
                        class="deleteButton" style="color: white;background:#00C0BF;padding:2px 6px">删除</a>
                 </td>
             </tr>

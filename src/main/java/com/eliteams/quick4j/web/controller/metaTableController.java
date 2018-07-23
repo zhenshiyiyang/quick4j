@@ -288,4 +288,27 @@ public class metaTableController {
             }
         }
     }
+    /*
+      删除文件，删除hdfs上文件并将mysql数据库中元数据isdelete属性置为1
+     */
+    @RequestMapping("/delete")
+    @ResponseBody
+    public String deleteFile(HttpServletRequest request,HttpServletResponse response,Model model) throws IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String loc = request.getParameter("loc");
+        String hdfs = "hdfs://master:9000";
+        String dest = "hdfs://master:9000"+loc;
+        int result = metaTableService.delete(id);
+        if(result>0){
+            System.out.println("删除的元数据行数："+ result);
+        }else{
+            System.out.println("删除元数据失败");
+            return "fail";
+        }
+        Configuration conf = new Configuration();
+        FileSystem fs = FileSystem.get(URI.create(hdfs),conf);
+        Path path = new Path(dest);
+        fs.delete(path,true);
+        return "success";
+    }
 }
