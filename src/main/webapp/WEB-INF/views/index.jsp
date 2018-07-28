@@ -116,7 +116,7 @@
 
                 <li class="">
                     <a href="javascript:;">
-                        <i class="fa fa-gears"></i><span class="title"> 非结构化数据系统 </span><span
+                        <i class="fa fa-gears"></i><span class="title"> 非结构化数据 </span><span
                             class="arrow "> </span>
                     </a>
                     <ul class="sub-menu">
@@ -134,19 +134,37 @@
                 </li>
 
                 <li class="">
-                    <a href="javascript:;">
-                        <i class="fa fa-user"></i><span class="title"> 结构化数据系统 </span><span
-                            class="arrow "> </span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="rest/page/struct">
-                                查询
-                            </a>
-                        </li>
+                <a href="javascript:;">
+                    <i class="fa fa-gears"></i><span class="title"> 结构化数据 </span><span
+                        class="arrow "> </span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="rest/page/struct">
+                            订制化查询
+                        </a>
+                    </li>
 
-                    </ul>
-                </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="javascript:;">
+                    <i class="fa fa-gears"></i><span class="title"> 渔船数据 </span><span
+                        class="arrow "> </span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="rest/spark/test">
+                            历史渔船位置查询
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            越界渔船位置查询
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
             </ul>
             <!-- END SIDEBAR MENU -->
