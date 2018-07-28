@@ -1,0 +1,162 @@
+.span:hover {
+	cursor: pointer;
+}
+
+.span {
+	font-weight: bold;
+	color: gray;
+	font-size: 15px;
+}
+
+#div_1 .form-control{
+	width:300px;
+}
+
+#pro_1{
+	margin-left:210px;
+	margin-top:10px;
+}
+
+
+
+.unfold {
+	width: 17px;
+	height: 17px;
+}
+
+
+#simBtn {
+	display: none
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+#accordion {
+	padding-left: 76px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+#accordion:before {
+	content: "";
+	width: 1px;
+	height: 90%;
+	background: #0F0F0F;
+	position: absolute;
+	top: 0;
+	left: 22px;
+	z-index: -1;
+}
+
+#accordion .panel {
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+#accordion .panel-heading {
+	padding: 0;
+	border-radius: 0;
+	border: none;
+}
+
+#accordion .panel-title a {
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	color: #0F0F0F;
+	padding: 10px 30px 15px 0;
+	background: #fff;
+	position: relative;
+	transition: all 0.5s ease 0s;
+}
+
+#accordion .panel-title a:before {
+	content: "\f05b";
+	font-family: 微软雅黑;
+	font-size: 20px;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #0F0F0F;
+	border: 1px solid #0F0F0F;
+	position: absolute;
+	top: 0;
+	left: -74px;
+}
+
+#accordion .panel-title a.collapsed:before {
+	color: #0F0F0F;
+	background: #fff;
+}
+
+#accordion .panel-body {
+	font-size: 14px;
+	color: #0F0F0F;
+	line-height: 25px;
+	padding: 5px 15px 15px 0;
+	border: none;
+}
+
+.div_1_input {
+	width: 273px;
+}
+
+#div_2 select {
+	width: 191px;
+	height: 200px;
+}
+
+#series{
+	margin-right:-16px;
+}
+
+#series tr td{
+	font-size:5px;
+}
+.color-control{
+	display: block;
+	width: 100%;
+	height: 34px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+
+#div_3 select {
+	width: 150px;
+}
+
+#tpletLabe {
+	height: 20px;
+	width: 150px;
+}
+
+#import_table4 {
+	margin-left: 61px;
+}
+
+#div_3_1 div {
+	margin-top: 6px;
+}
+
+#collapseFour input {
+	width: 100px;
+	height: 23px;
+}

@@ -1,0 +1,103 @@
+@CHARSET "UTF-8";
+
+.btn_right {
+	
+	float: right;
+	margin-right:20px;
+	margin-top:10px;
+	
+}
+.con{
+	padding:0px;
+	margin:0px;
+    width:100%;
+    background-color:white;
+	
+}
+*{
+	
+	font-size:18px;
+	
+}
+
+.left{
+	float: left;
+	
+}
+.pad{
+	padding:0px;
+	margin:0px;
+
+}
+
+.sql{
+	padding:0px;
+	margin:0px;
+	float:left;
+	width:26%;
+	
+	
+}
+.result{
+	text-align:center;
+	padding:0px;
+	margin:0px;
+	float:left;
+	width:74%;
+	
+   
+	
+}
+.mar{
+	
+	margin-top:20px;
+	
+	
+}
+
+.dbsel{
+	
+	width:100%;
+	margin-left:20px;
+}
+.comsel{
+	
+	width:50%;
+	margin-left:10px;
+}
+.label{
+	width:25%;
+	
+	
+}
+.minus{
+	
+	
+	margin-left:20px;
+}
+
+.drop{
+	width:87%;
+	
+	
+}
+.td0{
+	
+	width:5%;
+}
+.td1{
+	
+	width:40%;
+}
+.td2{
+	
+	width:28%;
+}
+.td3{
+	
+	width:27%
+}
+.inp{
+	
+	width:100%
+}

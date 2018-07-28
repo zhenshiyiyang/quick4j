@@ -140,7 +140,7 @@
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="javascript:;">
+                            <a href="rest/page/struct">
                                 查询
                             </a>
                         </li>

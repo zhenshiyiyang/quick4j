@@ -175,7 +175,7 @@ p.cue {
  background-color: #FFF;
  padding: 4px 5px;
  color: #999;
- font-size: 12x;
+ font-size: 12px;
  line-height: 20px;
  -webkit-appearance: none;
 }
@@ -191,7 +191,7 @@ p.cue {
  background-color: #FFF;
  padding: 4px 5px;
  color: #999;
- font-size: 12x;
+ font-size: 12px;
  line-height: 20px;
  -webkit-appearance: none;
 }
@@ -200,7 +200,7 @@ p.cue {
  background-color: #FFF;
  padding: 0;
  color: #999;
- font-size: 12x;
+ font-size: 12px;
  line-height: 20px;
  resize: none;
  min-height: 40px;
@@ -336,17 +336,12 @@ select {
  color: #D9D9D9;
  padding: 0 15px;
 }
-#head .nav a.topAdd {
- background: url(../images/top_add.gif) no-repeat 15px top;
- padding-left: 35px;
-}
+
 #head .nav a:hover, #head .nav a.cur {
  background-color: #60BBFF;
  color: #FFF;
 }
-#head .nav a.topAdd:hover {
- background: #60BBFF url(../images/top_add.gif) no-repeat 15px bottom;
-}
+
 #head .nav .noLeft {
  border-left: 0;
 }
@@ -361,9 +356,7 @@ select {
  background-color: #FFF;
  color: #000;
 }
-#head .nav .active a.topAdd {
- background: #FFF url(../images/top_add.gif) no-repeat 15px top;
-}
+
 #head .nav .drop {
  display: none;
  position: absolute;
@@ -437,9 +430,7 @@ select {
  height: 38px;
  overflow: hidden;
 }
-#menu li.cur {
- background: #60BBFF url(../images/menu_cur.gif) no-repeat right 50%;
-}
+
 #menu li.cur a {
  color: #FFF;
 }
@@ -448,13 +439,7 @@ select {
  height: 38px;
  line-height: 38px;
 }
-#menu li i {
- background: url(../images/icon_menu.png) no-repeat 13px 0;
- float: left;
- display: block;
- width: 42px;
- height: 38px;
-}
+
 #menu li em {
  float: left;
  display: block;
@@ -584,10 +569,7 @@ select {
  font-size: 13px;
  font-weight: bold;
 }
-.mainBox h3 .add {
- background: #28B779 url(../images/action_btn.gif) no-repeat 20px 50%;
- padding-left: 40px;
-}
+
 .mainBox .filter {
  margin: 0 0 10px -2px;
  height: 35px;
@@ -639,18 +621,13 @@ select {
  position: absolute;
  z-index: 1;
 }
-#maskBox .maskBg i {
- background: url(../images/icon_picture_big.png) no-repeat;
-}
+
 #maskBox #mask {
  position: absolute;
  z-index: 2;
 }
-#maskBox #mask i {
- background: url(../images/icon_picture_big.png) no-repeat left bottom;
-}
+
 #maskBox #success {
- background: #60BBFF url();
  display: none;
  width: 60px;
  padding: 0 10px;
@@ -702,11 +679,7 @@ select {
  border: 1px dotted #F6F6F6;
  background-color: #FFFFFF;
 }
-#index .indexBox .ipage a:hover {
- border: 1px dotted #FFFFFF;
- background: #60BBFF url(../images/icon_edit_white.png) no-repeat 12px 50%;
- color: #FFF;
-}
+
 /*- help -*/
 #index .help {
  margin-top:10px;
@@ -830,37 +803,14 @@ select {
  width:50%;
  text-align:right;
 }
-#order .btnShow {
- background: #FFFFFF url(../images/icon_edit_blue.png) no-repeat;
- border: none;
- width:16px;
- height:16px;
- text-indent:-999px;
- overflow:hidden;
- cursor:pointer;
- margin-left:10px;
-}
-#order .btnHide {
- background: #FFFFFF url(../images/icon_no.png) no-repeat;
- border: none;
- width:14px;
- height:14px;
- text-indent:-999px;
- overflow:hidden;
- cursor:pointer;
- margin-top:5px;
-}
+
+
 #order .trackingSubmit .edit {
  display:none;
 }
 /* 网站管理员
 ----------------------------------------------- */
-#manager .cloudAccount {
- background: url(../images/icon_cloud_account.png) no-repeat center top;
- text-align:center;
- padding-top:80px;
- margin-top:150px;
-}
+
 #manager .cloudAccount .inpMain {
  margin-right:20px;
 }
@@ -915,12 +865,7 @@ select {
  margin-bottom:20px;
 }
 /*- handle -*/
-#cloud .handle h2 {
- background:url(../images/icon_cloud_handle.png) no-repeat left top;
- height:46px;
- padding-left:45px;
- font-size:18px;
-}
+
 #cloud .handle p {
  margin-bottom:12px;
 }
@@ -931,12 +876,7 @@ select {
  margin:0 8px;
 }
 /*- order -*/
-#cloud .order h2 {
- background:url(../images/icon_cloud_order.png) no-repeat left top;
- height:46px;
- padding-left:45px;
- font-size:18px;
-}
+
 #cloud .order li {
  margin-bottom:10px;
 }
@@ -990,15 +930,7 @@ select {
  color: #FFF;
  font-size:14px;
 }
-#douFrame .frame h2 .close {
- background: url(../images/icon_fork.png) no-repeat;
- width:12px;
- height:12px;
- display:block;
- float:right;
- text-indent:-9999px;
- margin-top:11px;
-}
+
 #douFrame .details {
  border: 2px solid #C4C4C4;
  background-color:#FFF;
@@ -1041,14 +973,7 @@ select {
  color:#60BBFF;
  text-decoration:underline;
 }
-#module .uninstall .list h2 {
- background:url(../images/icon_cloud_uninstall.png) no-repeat left top;
- padding-left:40px;
- height:30px;
- color:#60BBFF;
- font-size:16px;
- margin-bottom:10px;
-}
+
 #module .uninstall .list ul {
  zoom:1;
  overflow:hidden;
@@ -1170,7 +1095,6 @@ select {
  margin-left: 120px;
 }
 #mobileBox #mMenu h3 {
- background:#60BBFF url(../images/icon_mobile.png) no-repeat center 30px;
  color:#FFF;
  font-size:14px;
  font-weight:bold;
@@ -1198,11 +1122,7 @@ select {
  margin-top: 120px;
  overflow: hidden;
 }
-#login .dologo {
- background: url(../images/logo.gif) no-repeat 0 0;
- height: 50px;
- margin-bottom: 30px;
-}
+
 #login li {
  height: 34px;
  margin-bottom: 15px;
@@ -1277,19 +1197,13 @@ select {
 /* 信息提示
 ----------------------------------------------- */
 /*- douMsg -*/
-#douMsg {
- background: url(../images/icon_exc_small.gif) no-repeat left top;
- padding: 27px 0 0 70px;
- margin-top: 30px;
-}
+
 #douMsg h2 {
  font-size: 16px;
  font-weight: bold;
  color: #0574C7;
 }
-#douMsg dl {
- background: url(../images/icon_back_arrow.gif) no-repeat right bottom;
-}
+
 #douMsg dt {
  padding: 10px 0 25px 0;
  font-size: 13px;
@@ -1304,13 +1218,7 @@ select {
  color: #60BBFF;
 }
 /*- outMsg -*/
-#outMsg {
- background: url(../images/icon_exc.gif) no-repeat left top;
- margin: 0px auto;
- width: 340px;
- padding: 30px 0 0 80px;
- margin-top: 160px;
-}
+
 #outMsg h2 {
  font-size: 22px;
  font-weight: bold;
@@ -1321,11 +1229,7 @@ select {
  font-size: 13px;
  color: #666666;
 }
-#outMsg dd {
- background: url(../images/icon_back.gif) no-repeat left top;
- padding-left: 25px;
- font-size: 14px;
-}
+
 /* 公共底部
 ----------------------------------------------- */
 #footer {

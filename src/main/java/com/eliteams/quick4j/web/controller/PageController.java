@@ -68,4 +68,11 @@ public class PageController {
     public String search() {
         return "unStruct/search";
     }
+    /*
+      结构化数据检索
+     */
+    @RequestMapping("/struct")
+    public String jump(){
+        return "Struct/search";
+    }
 }
